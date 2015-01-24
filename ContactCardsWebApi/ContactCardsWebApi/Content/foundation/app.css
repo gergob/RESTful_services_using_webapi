@@ -1,0 +1,32 @@
+﻿.icon-bar {
+    background: #388E8E;
+}
+
+.icon-bar > * label {
+    color: #000000;
+}
+
+.button {
+    background-color: #388E8E;
+}
+
+table tr th {
+    background: #F2F2F2;
+}
+
+table tr td {
+    font-family: monospace;
+    font-size:medium;
+}
+
+.login_header {
+    margin-top:3.5em;
+}
+
+.login_message {
+    color:#388E8E;
+}
+
+.page_not_found {
+   margin-top:2.5em;
+}

@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="large-12 columns">
+        <h2>Welcome to ASP.NET Web Api REST Contact Cards Page!</h2>
+    </div>
+    <div class="large-12 columns">
+        <table>
+            <thead>
+                <tr>
+                    <th width="70">HTTP</th>
+                    <th width="120">Route</th>
+                    <th width="360">Description</th>
+                    <th>Example</th>            
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/api/contacts/</td>                    
+                    <td>Returns all the contacts in the database.</td>
+                    <td></td>                    
+                </tr>
+
+                <tr>
+                    <td>GET</td>
+                    <td>/api/contacts/<strong>id</strong></td>
+                    <td>Returns one contact from the database with the given <strong>id</strong>.</td>
+                    <td>/api/contacts/3c2fc51c-a99f-44aa-9f0f-ffef0f7af9b9</td>                                        
+                </tr>
+
+                <tr>
+                    <td><strong>POST</strong></td>
+                    <td>/api/contacts/</td>
+                    <td>Saves the new contact passed in the form data of the message.</td>
+                    <td>/api/contacts/                    
+                        <h6>Form data</h6>
+                        FirstName:James<br/>
+                        Birthday:1975-02-07<br />
+                        Email:tomj@tomj.com<br />
+                        HomePhone:123213123                    
+                    </td>                 
+                </tr>
+
+                <tr>
+                    <td><strong>PUT</strong></td>
+                    <td>/api/contacts/<strong>id</strong></td>
+                    <td>The contact with <strong>id</strong> is updated from the form data of the message.</td>
+                    <td>
+                        /api/contacts/3c2fc51c-a99f-44aa-9f0f-ffef0f7af9b9
+                        <h6>Form data</h6>
+                        FirstName:Jane<br />
+                        Birthday:1945-12-07<br />
+                        Email:jaja@jane.com<br />
+                        HomePhone:1232178745
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>DELETE</strong></td>
+                    <td>/api/contacts/<strong>id</strong></td>
+                    <td>Deletes the contact from the database with the given <strong>id</strong>.</td>
+                    <td>/api/contacts/3c2fc51c-a99f-44aa-9f0f-ffef0f7af9b9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
