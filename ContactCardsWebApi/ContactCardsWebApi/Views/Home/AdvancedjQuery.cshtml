@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Advanced jQuery";
+}
+
+
+<div class="row">
+    <h2>Advanced jQuery</h2>
+    <div class="large-12 columns" id="contacts">
+        </div>
+    </div>
+
+        @section scripts {
+            <script>
+                $(document).ready(function () {
+                    console.log('Loading contacts');
+                    var dataToServer = {};
+
+                    $.getJSON("/api/contacts", dataToServer, function (data, status, jqXHR) {
+                        console.log(status);
+                        createContactList(data);                        
+                    });
+
+                    dataToServer.id = "4093e51f-95cb-4a3a-8572-cd4c19321fb8";
+                    $.getJSON("/api/contacts", dataToServer, function (data, status, jqXHR) {
+                        console.log(status);
+                        console.log(data);
+                    });
+
+                    //$.post("/api/contacts", {
+                    //    FirstName: "Advanced",
+                    //    LastName: "jQuery",
+                    //    Email: "aj@example.com",
+                    //    Website: "http://example.com"
+                    //}, function (data, status, jqXHR) {
+                    //    console.log(status);
+                    //    console.log(data);
+                    //});
+
+                    //$.ajax({
+                    //    url: "/api/contactsss",
+                    //    type: 'GET',
+                    //    dataType: 'json'
+                    //}).done(
+                    //    createContactList
+                    //).fail(function (error) {
+                    //    console.log(error);
+                    //    alert("Error occured while loading contacts!");
+                    //});
+
+                });
+
+                function createContactList(data) {
+
+                    var container = $('#contacts');
+                    var list = $("<ol></ol>");
+
+                    $.each(data, function (idx, item) {
+                        var name = item.FirstName + " " + item.LastName + "  [" + item.ID + "]";
+                        console.log(name);
+
+                        var newEntry = $("<li></li>");
+                        $(newEntry).text(name);
+                        $(list).append(newEntry);
+
+                    });
+                    $(container).append(list);
+                }
+
+            </script>
+        }

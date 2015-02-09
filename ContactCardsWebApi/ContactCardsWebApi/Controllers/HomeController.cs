@@ -12,5 +12,10 @@ namespace ContactCardsWebApi.Controllers
         {
             return View();
         }
+
+        public ActionResult AdvancedjQuery()
+        {
+            return View();
+        }
     }
 }
