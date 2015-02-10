@@ -26,6 +26,9 @@ namespace ContactCardsWebApi
             bundles.Add(Foundation.Scripts());
 
             #endregion
+
+            bundles.Add(new ScriptBundle("~/bundles/angularApp").Include(
+                      "~/Scripts/spa/contactCards.js"));
         }
     }
 }

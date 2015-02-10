@@ -17,5 +17,10 @@ namespace ContactCardsWebApi.Controllers
         {
             return View();
         }
+
+        public ActionResult Angular()
+        {
+            return View();
+        }
     }
 }
