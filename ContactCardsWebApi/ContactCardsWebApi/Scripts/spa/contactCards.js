@@ -10,4 +10,10 @@ contactCardsApp.controller('ContactListCtrl', ['$scope', '$http',function ($scop
             console.log(error);
             alert(error);
         });
+    $scope.mobileFilter = function (contact) {
+        if (contact.MobilePhone === null || contact.MobilePhone === undefined) {
+            return false;
+        }
+        return true;
+    };
 }]);
